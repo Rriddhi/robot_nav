@@ -21,9 +21,10 @@ If the distance is greater than a minimum value(dependent on the image size) and
 In 1 terminal, start `roscore`.
 
 *To set the environment variable, a single machine configuration can be done by pasting this in the terminal and then subsequently starting* `roscore` 
- 
-`$ export ROS_HOSTNAME=localhost`  
-`$  export ROS_MASTER_URI=http://localhost:11311`
+```
+$ export ROS_HOSTNAME=localhost  
+$  export ROS_MASTER_URI=http://localhost:11311
+```
 
 In another terminal, navigate to the directory where the the file `front_rack.py` and the rosbag file containing data from the navigation in the warehouse is stored.
 
