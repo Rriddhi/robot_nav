@@ -20,7 +20,11 @@ If the distance is greater than a minimum value(dependent on the image size) and
 ---
 In 1 terminal, start `roscore`.
 
-In another terminal, navigate to the directory where the the file `front_rack .py` and the rosbag file containing data from the navigation in the warehouse is stored.
+*To set the environment variable, a single machine configuration can be done by pasting this in the terminal and then subsequently starting* `roscore` 
+ `$ export ROS_HOSTNAME=localhost
+$  export ROS_MASTER_URI=http://localhost:11311`
+
+In another terminal, navigate to the directory where the the file `front_rack.py` and the rosbag file containing data from the navigation in the warehouse is stored.
 
 If no error is shown,run the script with 
 ```
@@ -37,7 +41,7 @@ The program will then ask for a user input on the name of the rosbag file to be 
 5. Ideally, 2 bounding rectangles around the front legs of the rack are to be drawn if the rack is in the frame of the camera. However, sometimes it is possible to detect more than 2 bounding rectangles, which just represent the upper vertical part of the rack legs.
 6. It was ensured that the distance between each point in the bounding rectangle and the image centre was only deviating about 20% of the distance between the image centre and the subsequent points so as to account for slight variations in the robot's position when the video was being captured.
 
-##Afterthoughts to proposed solution
+## Afterthoughts to proposed solution
 ---
 1. If a similarly ultramarine blue coloured object is present on the rack, the camera might detet it as a rack leg and as such result in a false printing of "Front rack detected..."
 2. A rack may not be detected in much darker areas where the colour may deviate significantly from the colour detected in the video.
